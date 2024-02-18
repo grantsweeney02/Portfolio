@@ -3,6 +3,16 @@
     --text-color: white;
 }
 
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -51,6 +61,7 @@ header {
 .nav-item .nav-link:hover {
     color: #76b4f9;
 }
+
 /* END OF NAVBAR */
 
 /* START OF ABOUT */
