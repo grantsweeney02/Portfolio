@@ -13,18 +13,3 @@ document.addEventListener("DOMContentLoaded", function () {
         .matchMedia("(prefers-color-scheme: dark)")
         .addEventListener("change", updateFaviconBasedOnColorScheme);
 });
-
-const themeToggle = document.getElementById("themeToggle");
-let currentTheme = localStorage.getItem("theme") || "dark";
-
-const applyTheme = (theme) => {
-    document.body.className = theme;
-    localStorage.setItem("theme", theme);
-};
-
-themeToggle.addEventListener("click", () => {
-    currentTheme = currentTheme === "light" ? "dark" : "light";
-    applyTheme(currentTheme);
-});
-
-applyTheme(currentTheme);
