@@ -15,69 +15,116 @@
 <body>
     <header>
         <nav class="navbar">
-            <a class="navbar-brand" href="../html/intro.html"><img id="logo"
-                    src="../assets/images/dark-mode-favicon.ico" alt=""></a>
+            <a class="navbar-brand" href=""><img id="logo" src="../assets/images/light-mode-favicon.ico" alt=""></a>
             <div class="navbar-links" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#About">About</a>
+                        <a class="nav-item--link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Work">Work</a>
+                        <a class="nav-item--link" href="#work">Work</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Projects">Projects</a>
+                        <a class="nav-item--link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Contant">Contact</a>
+                        <a class="nav-item--link" href="#contacts">Contact</a>
                     </li>
                 </ul>
             </div>
     </header>
     <main>
-        <section id="home">
-            Hello, my name is Grant Sweeney
-        </section>
         <section id="about">
-            <h2>About Me</h2>
-            <h3>Hello! My name is Grant Sweeney. I am a software developer focusing in Full Stack and Mobile
-                Development. I have 3 previous internships and Head Teaching Assistant at the University of Virginia.
-                I am a double majoring in Computer Science and Economics, giving a unique skill set applicable in
-                different fields.
+            <h3>Hello! My name is Grant Sweeney, and I specialize in both Full Stack and Mobile Development. My
+                experience includes three internships and a role as the Head Teaching Assistant at the University of
+                Virginia. Academically, I am pursuing dual degrees in Computer Science and Economics. This unique
+                combination of education and experience equips me with a diverse skill set that is applicable across
+                various fields.
             </h3>
+            <div class="about-resume--card">
+                <a class="about-resume--link" href="../assets/resume.pdf">My Resume</a>
+            </div>
+
+        </section>
+        <section id="work">
+            <h2>Projects</h2>
+            <ul>
+                <li class="work-item">
+                    <h3>University of Virginia - Head Teaching Assistant</h3>
+                    <h4>Offered expert guidance to over 150 students per semester in debugging and testing Java code,
+                        leveraging advanced tools such as JavaFX, Mockito, Hibernate, and Gradle to bolster students'
+                        software development proficiency.
+                        • Delivered engaging lectures on complex subjects such as OO Decomposition, UML Diagrams, and
+                        Software Design Principles to audiences of up to 400 students, leading to an improvement in
+                        student comprehension, as indicated by course feedback.
+                        • Recognized with the Louis T. Rader Teaching Award for outstanding teaching performance, an
+                        honor bestowed upon a single teaching assistant annually for exceptional dedication and impact.
+                    </h4>
+                </li>
+                <li class="work-item">
+                    <h3>Carmax - Software Engineering Intern</h3>
+                    <h4>Designed and developed a robust C# .NET application with a modern React.JS front-end, optimizing
+                        CarMax's NLP chatbot
+                        (SKYE) AI training reinforcement process in a Kanban agile team framework.
+                        Synthesized cutting-edge NLP technologies employing OpenAI and Microsoft LUIS (Language
+                        Understanding Intelligent
+                        Service), boosting chatbot understanding and response accuracy.
+                        Engineered efficient C# Azure Functions, creating API endpoints for seamless access to
+                        CosmosDB and implemented an
+                        asynchronous trigger, streamlining data updates in conjunction with calls to OpenAI.</h4>
+                </li>
+                <li class="work-item">
+                    <h3>REI SYSTEMS - Software Engineering Intern</h3>
+                    <h4>Collaborated with engineers in designing and deploying a real-time data streaming pipeline,
+                        enhancing functionality of
+                        IntelliSearch, an AI-driven search engine, through a Java application interfacing with AWS
+                        CloudWatch. Deployed and managed applications using Docker and Helm charts within Kubernetes
+                        clusters, accurately simulating production
+                        environments and refining deployment efficiency.</h4>
+                </li>
+            </ul>
         </section>
         <section id="projects">
             <h2>Projects</h2>
             <ul>
-                <li>
+                <li class="project-item">
                     <h3>HoosTutoring</h3>
-                    <h4>Django-based web application enabling students to easily search for and request tutors,
-                        utilizing with UVA's SIS API to fetch real-time class information</h4>
+                    <h4>Django web application enabling students to easily search for and request tutors,
+                        utilizing UVA's SIS API to fetch real-time class information</h4>
                 </li>
-                <li>
+                <li class="project-item">
                     <h3>Credit Score Simulator</h3>
                     <h4>React.js application winning first place at HooHacks in the Capital One Finance Track, Credit
                         Score Simulator predicts credit score changes based on user's life choices, utilizing a
                         heuristic based model using FICO scoring criteria</h4>
                 </li>
-                <li>
+                <li class="project-item">
                     <h3>Fraternity Family Tree</h3>
                     <h4>Applied Python skills to generate a color coded family free for 100+ fraternity members
-                        Utilizing Python and Graphviz.</h4>
+                        using Python and Graphviz.</h4>
                 </li>
-                <li>
+                <li class="project-item">
                     <h3>EpochTrade</h3>
                     <h4>Stock Trading Swift Native Mobile App with Node.js backend</h4>
                 </li>
-                <li>
+                <li class="project-item">
                     <h3>BucketGo</h3>
-                    <h4>Cross-platform </h4>
+                    <h4>Cross-platform Flutter mobile application for sharing and creating bucket list. Generates lists
+                        of activities in the selected area to swipe on to add to your lists.</h4>
                 </li>
             </ul>
         </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <h3><a href="mailto:grantsweeney02@gmail.com">Email</a></h3>
+        <section id="contacts">
+            <h2>Contacts</h2>
+            <div class="contact-items">
+                <h3 class="contact-item"><a class="contact-item--link" href="mailto:grantsweeney02@gmail.com">Email</a>
+                </h3>
+                <h3 class="contact-item"><a class="contact-item--link"
+                        href="https://www.linkedin.com/in/grant-sweeney/">LinkedIn</a></h3>
+                <h3 class="contact-item"><a class="contact-item--link"
+                        href="https://github.com/grantsweeney02">GitHub</a></h3>
+            </div>
+
         </section>
     </main>
     <script src="../js/script.js"></script>

@@ -1,32 +1,8 @@
+/* START OF SETTINGS */
 :root {
-    --bg-color: rgb(0, 0, 0);
-    --text-color: white;
-}
-
-/* START OF INTRO */
-
-#hackerIntro {
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: black;
-    color: limegreen;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-}
-/* END OF INTRO */
-
-body.light {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-body.dark {
-    background-color: #000000;
-    color: #ffffff;
+    --bg-color: rgb(142, 227, 255);
+    --text-color: rgb(0, 0, 0);
+    --hover-color: rgb(0, 119, 255);
 }
 
 * {
@@ -39,9 +15,15 @@ body {
     font-family: "Noto Sans Mono", monospace;
     background-color: var(--bg-color);
     color: var(--text-color);
-
 }
 
+main {
+    margin: 10px;
+    height: 200vh;
+}
+
+/* END OF SETTINGS */
+/* *********************************************************************** */
 /* START OF NAVBAR */
 header {
     background: transparent;
@@ -67,16 +49,101 @@ header {
     display: flex;
 }
 
-.nav-item .nav-link {
+.nav-item .nav-item--link {
+    padding: 20px;
     text-decoration: none;
     color: var(--text-color);
     font-size: 20px;
     transition: color 0.3s ease;
 }
 
-.nav-item .nav-link:hover {
-    color: #76b4f9;
+.nav-item .nav-item--link:hover {
+    color: var(--hover-color);
 }
-/* END OF NAVBAR */
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+}
+
+/* END OF NAVBAR */
+/* *********************************************************************** */
 /* START OF ABOUT */
+#about {
+    margin: 20px 20px;
+}
+
+.about-resume--card {
+    background-color: white;
+    border-radius: 10px;
+    width: 200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-resume--link,
+.about-resume--link:visited {
+    color: var(--text-color);
+}
+
+.about-resume--link:hover {
+    color: var(--hover-color);
+}
+
+/* END OF ABOUT */
+/* *********************************************************************** */
+/* START OF WORK */
+#work {
+    padding: 20px;
+}
+
+.work-item {
+    padding: 5px;
+}
+
+/* END OF WORK */
+/* *********************************************************************** */
+/* START OF PROJECTS */
+#projects {
+    padding: 20px;
+}
+
+.project-item {
+    padding: 5px;
+}
+
+/* END OF PROJECTS */
+/* *********************************************************************** */
+/* START OF CONTACTS */
+#contacts {
+    padding: 20px;
+}
+
+.contact-items {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-item {
+    padding: 5px;
+}
+
+.contact-item--link {
+    color: var(--text-color);
+}
+
+.contact-item--link:hover {
+    color: var(--hover-color);
+}
+
+/* END OF CONTACTS */
+/* *********************************************************************** */
