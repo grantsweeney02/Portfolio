@@ -1,6 +1,6 @@
 /* START OF SETTINGS */
 :root {
-    --bg-color: rgb(142, 227, 255);
+    --bg-color: #9ee7ff;
     --text-color: rgb(0, 0, 0);
     --hover-color: rgb(0, 119, 255);
 }
@@ -9,31 +9,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: "Noto Sans Mono", monospace;
-    background-color: var(--bg-color);
-    color: var(--text-color);
 }
 
 main {
-    margin: 10px;
-    height: 200vh;
+    margin-left: 250px;
+    background-color: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(158, 231, 255, 1) 100%);
+    width: calc(100% - 250px);
 }
 
 /* END OF SETTINGS */
 /* *********************************************************************** */
 /* START OF NAVBAR */
-header {
-    background: transparent;
-}
-
-.navbar {
+aside.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    /* Allows for scrolling if items exceed the viewport height */
+    background-color: var(--bg-color);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(158, 231, 255, 1) 100%);
+    /* Background color, adjust as needed */
     display: flex;
+    flex-direction: column;
+    /* Aligns children (links) in a column */
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 20px;
+    /* Centers items horizontally */
+    padding-top: 20px;
 }
 
 .navbar-brand img {
@@ -46,7 +50,6 @@ header {
 
 .navbar-nav {
     list-style: none;
-    display: flex;
 }
 
 .nav-item .nav-item--link {
@@ -76,10 +79,6 @@ header {
 /* END OF NAVBAR */
 /* *********************************************************************** */
 /* START OF ABOUT */
-#about {
-    margin: 20px 20px;
-}
-
 .about-resume--card {
     background-color: white;
     border-radius: 10px;
