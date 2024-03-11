@@ -1,8 +1,11 @@
 /* START OF SETTINGS */
 :root {
-    --bg-color: #9ee7ff;
-    --text-color: rgb(0, 0, 0);
-    --hover-color: rgb(0, 119, 255);
+    --bg-color: #76ABAE;
+    --secondary-bg-color: #eeeeee;
+    --hover-color: #434952;
+    --secondary-hover-color: #31363f;
+    --content-main-color: #eeeeee;
+
 }
 
 * {
@@ -12,137 +15,164 @@
     font-family: "Noto Sans Mono", monospace;
 }
 
+body {
+    background-color: var(--bg-color);
+    color: var(--content-main-color);
+}
+
 main {
-    margin-left: 250px;
-    background-color: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(158, 231, 255, 1) 100%);
-    width: calc(100% - 250px);
+    margin-left: 200px;
+    width: calc(100% - 200px);
 }
 
 /* END OF SETTINGS */
 /* *********************************************************************** */
 /* START OF NAVBAR */
-aside.navbar {
+.sidebar {
+    background: var(--secondary-bg-color);
+    /* background: linear-gradient(90deg, rgba(113, 81, 255, 1) 50%, rgba(158, 231, 255, 1) 100%);
+    color: var(--text-color); */
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
     left: 0;
     top: 0;
-    width: 250px;
-    height: 100vh;
-    overflow-y: auto;
-    /* Allows for scrolling if items exceed the viewport height */
-    background-color: var(--bg-color);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(158, 231, 255, 1) 100%);
-    /* Background color, adjust as needed */
-    display: flex;
-    flex-direction: column;
-    /* Aligns children (links) in a column */
-    align-items: center;
-    /* Centers items horizontally */
-    padding-top: 20px;
+    padding: 20px 0;
 }
 
-.navbar-brand img {
-    height: 60px;
+.sidebar-brand {
+    text-align: center;
+    margin-bottom: 80px;
 }
 
-.navbar-links {
+.logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.brand-info h2,
+.brand-info p {
+    margin: 5px 0;
+}
+
+.brand-info h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.brand-info p {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.sidebar-nav {
+    width: 100%;
+}
+
+.nav-list {
+    list-style-type: none;
+    width: 100%;
     text-align: center;
 }
 
-.navbar-nav {
-    list-style: none;
+.nav-item {
+    width: 100%;
+    padding: 10px 20px;
 }
 
-.nav-item .nav-item--link {
-    padding: 20px;
+.nav-link {
     text-decoration: none;
-    color: var(--text-color);
-    font-size: 20px;
-    transition: color 0.3s ease;
+    color: var(--secondary-hover-color);
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    border-radius: 20px;
+    transition: background-color 0.3s;
 }
 
-.nav-item .nav-item--link:hover {
-    color: var(--hover-color);
+.nav-link:hover,
+.nav-link.active {
+    background-color: var(--hover-color);
+    border-radius: 20px;
+    color: var(--secondary-bg-color);
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+.social-links {
+    margin-top: auto;
+    padding-bottom: 100px;
+}
 
-    .navbar-nav {
-        flex-direction: column;
-    }
+.social-link {
+    display: block;
+    margin: 10px 0;
+}
+
+.social-link img {
+    width: 30px;
+    height: auto;
 }
 
 /* END OF NAVBAR */
 /* *********************************************************************** */
+/* START OF SECTIONS */
+.section {
+    min-height: 100vh;
+    padding: 50px;
+    margin-bottom: 2rem;
+}
+
+/* END OF SECTIONS */
+/* *********************************************************************** */
+/* START OF HOME */
+
+/* END OF HOME */
+/* *********************************************************************** */
 /* START OF ABOUT */
-.about-resume--card {
-    background-color: white;
-    border-radius: 10px;
-    width: 200px;
-    margin: auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
+#about {
+    background-color: var(--bg-color);
+    color: var(--content-main-color);
 }
 
-.about-resume--link,
-.about-resume--link:visited {
-    color: var(--text-color);
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-.about-resume--link:hover {
-    color: var(--hover-color);
+#about p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.resume-link {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 15px;
+    background-color: var(--hover-color);
+    color: var(--content-main-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-link:hover {
+    background-color: var(--secondary-hover-color);
+    /* Darker shade for hover effect */
 }
 
 /* END OF ABOUT */
 /* *********************************************************************** */
 /* START OF WORK */
-#work {
-    padding: 20px;
-}
-
-.work-item {
-    padding: 5px;
-}
-
 /* END OF WORK */
 /* *********************************************************************** */
 /* START OF PROJECTS */
-#projects {
-    padding: 20px;
-}
-
-.project-item {
-    padding: 5px;
-}
-
 /* END OF PROJECTS */
 /* *********************************************************************** */
 /* START OF CONTACTS */
-#contacts {
-    padding: 20px;
-}
-
-.contact-items {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.contact-item {
-    padding: 5px;
-}
-
-.contact-item--link {
-    color: var(--text-color);
-}
-
-.contact-item--link:hover {
-    color: var(--hover-color);
-}
-
 /* END OF CONTACTS */
 /* *********************************************************************** */
