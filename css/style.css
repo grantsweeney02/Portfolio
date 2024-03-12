@@ -146,6 +146,7 @@ main {
     padding: 0;
     animation: fadeIn 2s ease-in-out;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -196,63 +197,59 @@ main {
 /* END OF ABOUT */
 /* *********************************************************************** */
 /* START OF WORK */
-.carousel {
-    padding: 0 40px;
-    position: relative;
-    max-width: calc(100% - 80px);
-    margin: auto;
+#work {
+    padding: 40px;
 }
 
-.cards-container {
+#work h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.work-container {
     display: flex;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    gap: 20px;
-    padding: 20px 0;
+    background-color: var(--hover-color);
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
 }
 
-.card {
-    flex: 0 0 auto;
-    width: 300px;
-    background-color: var(--secondary-hover-color);
-    padding: 20px;
-    border-radius: 20px;
-    scroll-snap-align: start;
+.logo-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.logo-frame {
+    width: 200px;
+    height: 200px;
+    border: #000;
+    margin: 5px 0px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .company-logo {
-    width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
+    background-color: white;
+    width: 200px;
 }
 
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    z-index: 10;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+.job-description {
+    width: 400px;
+    margin: 5px 0px;
+    padding: 10px;
+    background-color: var(--secondary-hover-color);
 }
 
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+.hidden {
+    display: none;
 }
 
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
+
 
 /* END OF WORK */
 /* *********************************************************************** */

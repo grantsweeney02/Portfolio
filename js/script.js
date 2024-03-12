@@ -16,26 +16,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 
-// work experience card carousel
-document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector(".cards-container");
-    const cards = container.querySelectorAll(".card");
-    const cardWidth = cards[0].offsetWidth + 20;
-    const visibleCards = 3;
-    let maxScroll = (cards.length - visibleCards) * cardWidth;
-    let currentScroll = 0;
+const logos = document.querySelectorAll(".company-logo");
+  const descriptions = document.querySelectorAll(".job-description");
 
-    document.querySelector(".next").addEventListener("click", () => {
-        if (currentScroll < maxScroll) {
-            currentScroll += cardWidth * visibleCards;
-            container.scrollBy({ left: cardWidth * visibleCards, top: 0, behavior: "smooth" });
-        }
-    });
+  logos.forEach((logo) => {
+    logo.addEventListener("click", () => {
+      descriptions.forEach((description) => {
+        description.classList.add("hidden");
+      });
+      const target = logo.getAttribute("data-target");
+      const targetDescription = document.getElementById(target);
 
-    document.querySelector(".prev").addEventListener("click", () => {
-        if (currentScroll > 0) {
-            currentScroll -= cardWidth * visibleCards;
-            container.scrollBy({ left: -cardWidth * visibleCards, top: 0, behavior: "smooth" });
-        }
+      if (targetDescription) {
+        targetDescription.classList.remove("hidden");
+      }
     });
-});
+  });
+
