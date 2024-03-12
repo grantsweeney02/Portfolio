@@ -223,7 +223,6 @@ main {
 .logo-frame {
     width: 200px;
     height: 200px;
-    border: #000;
     margin: 5px 0px;
     background-color: white;
     display: flex;
