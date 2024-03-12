@@ -211,7 +211,6 @@ main {
     display: flex;
     background-color: var(--hover-color);
     padding: 20px;
-    border-radius: 10px;
     justify-content: center;
 }
 
@@ -234,14 +233,14 @@ main {
 }
 
 .company-logo {
-    background-color: white;
     width: 200px;
+    background-color: white;
 }
 
 .job-description {
     width: 400px;
-    margin: 5px 0px;
     padding: 10px;
+    margin: 5px 0px;
     background-color: var(--secondary-hover-color);
 }
 
