@@ -15,21 +15,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
     window.addEventListener("scroll", changeLinkState);
 });
 
-
 const logos = document.querySelectorAll(".company-logo");
-  const descriptions = document.querySelectorAll(".job-description");
+const descriptions = document.querySelectorAll(".job-description");
 
-  logos.forEach((logo) => {
+logos.forEach((logo) => {
     logo.addEventListener("click", () => {
-      descriptions.forEach((description) => {
-        description.classList.add("hidden");
-      });
-      const target = logo.getAttribute("data-target");
-      const targetDescription = document.getElementById(target);
+        descriptions.forEach((description) => {
+            description.classList.add("hidden");
+        });
+        const target = logo.getAttribute("data-target");
+        const targetDescription = document.getElementById(target);
 
-      if (targetDescription) {
-        targetDescription.classList.remove("hidden");
-      }
+        if (targetDescription) {
+            targetDescription.classList.remove("hidden");
+        }
     });
-  });
+});
 
+window.addEventListener("scroll", function () {
+    var scrollIndicator = document.querySelector(".scroll-down");
+    var opacity = 1 - window.scrollY / 300;
+    scrollIndicator.style.opacity = opacity > 0 ? opacity : 0;
+});

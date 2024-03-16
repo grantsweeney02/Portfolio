@@ -5,15 +5,16 @@
     --hover-color: #434952;
     --secondary-hover-color: #31363f;
     --content-main-color: #eeeeee;
-
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px;
     font-family: "Noto Sans Mono", monospace;
 }
+
 
 body {
     background-color: var(--bg-color);
@@ -30,8 +31,6 @@ main {
 /* START OF NAVBAR */
 .sidebar {
     background: var(--secondary-bg-color);
-    /* background: linear-gradient(90deg, rgba(113, 81, 255, 1) 50%, rgba(158, 231, 255, 1) 100%);
-    color: var(--text-color); */
     width: 200px;
     height: 100vh;
     display: flex;
@@ -131,7 +130,8 @@ main {
 /* START OF HOME */
 #home {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
     text-align: center;
@@ -145,6 +145,46 @@ main {
     margin: 0;
     padding: 0;
     animation: fadeIn 2s ease-in-out;
+}
+
+.scroll-down {
+    text-align: center;
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.scroll-down p {
+    margin: 0;
+    font-size: 16px;
+    color: inherit;
+}
+
+.scroll-link {
+    display: block;
+    margin-top: 10px;
+    color: inherit;
+    font-size: 2em;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
 }
 
 @keyframes fadeIn {
@@ -177,6 +217,7 @@ main {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .resume-link {
@@ -269,8 +310,7 @@ main {
 }
 
 .project-card {
-    perspective: 1000px;
-    height: 350px;
+    height: 400px;
 }
 
 .card-inner {
@@ -304,7 +344,7 @@ main {
 
 .project-thumbnail {
     max-width: 100%;
-    max-height: 120px;
+    max-height: 200px;
     object-fit: contain;
     margin-bottom: 10px;
 }
